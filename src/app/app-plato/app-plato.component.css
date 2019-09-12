@@ -1,0 +1,9 @@
+.imagePlatos{
+  width: 250px;
+}
+
+@media screen and(max-width:425px){
+  .imagePlatos{
+    width: 50px;
+  }
+}

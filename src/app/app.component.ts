@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { AppPlatoComponent } from './app-plato/app-plato.component'
 
 @Component({
   selector: 'app-root',
@@ -7,5 +6,5 @@ import { AppPlatoComponent } from './app-plato/app-plato.component'
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Angular 8 ';
+  user = 'Usuario';
 }
