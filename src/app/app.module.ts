@@ -3,10 +3,12 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AppPlatoComponent } from './app-plato/app-plato.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AppPlatoComponent
   ],
   imports: [
     BrowserModule,
