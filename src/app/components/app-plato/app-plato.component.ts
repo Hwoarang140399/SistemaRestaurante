@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppPlatoComponent implements OnInit {
 
-  public platos = [
+  public platosPrincipales = [
     {"id": "arrozconpollo",
     imageUrl: "https://www.jamear.com/wp-content/uploads/2017/01/arrozconpollo-peruano.png",
     "name": "Arroz Con Pollo"},
