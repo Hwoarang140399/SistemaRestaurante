@@ -1,9 +1,9 @@
-.imagePlatos{
+.imagenCarta{
   width: 250px;
 }
 
 @media screen and(max-width:425px){
-  .imagePlatos{
+  .imagenCarta{
     width: 50px;
   }
 }

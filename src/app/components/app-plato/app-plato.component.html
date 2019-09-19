@@ -1,17 +1,50 @@
-<div *ngFor="let plato of platosPrincipales" class="container">
-  <!-- <div class="d-flex justify-content-around align-items-center py-5"> -->
-    <div class="row">
-      <div class="col-md-4 py-5 d-flex justify-content-center">
-        <img [src]="plato.imageUrl" alt="{{plato.name}}" class="imagePlatos"  />
-      </div>
-      <div class="col-md-4 d-flex align-items-center justify-content-center">
-
-        <div class="font-weight-bold">{{plato.name}}</div>
-      </div>
-      <div class="col-md-4 d-flex justify-content-center align-items-center">
-        <button class="btn btn-success my-3" style="width:100px; height: 50px;;">Ordenar</button>
-      </div>
+<h1 class="text-center pt-4">ENTRADAS</h1>
+<div *ngFor="let entrada of Entradas" class="container">
+  <div class="row">
+    <div class="col-md-4 py-5 d-flex justify-content-center">
+      <img [src]="entrada.imageUrl" alt="{{ entrada.name }}" class="imagenCarta" />
     </div>
+    <div class="col-md-4 d-flex align-items-center justify-content-center">
+      <div class="font-weight-bold">{{ entrada.name }}</div>
+    </div>
+    <div class="col-md-4 d-flex justify-content-center align-items-center">
+      <button class="btn btn-success my-3" style="width:100px; height: 50px;;">
+        Ordenar
+      </button>
+    </div>
+  </div>
+</div>
 
-  <!-- </div> -->
+<h1 class="text-center pt-5">PLATOS PRINCIPALES</h1>
+<div *ngFor="let plato of platosPrincipales" class="container">
+  <div class="row">
+    <div class="col-md-4 py-5 d-flex justify-content-center">
+      <img [src]="plato.imageUrl" alt="{{ plato.name }}" class="imagenCarta" />
+    </div>
+    <div class="col-md-4 d-flex align-items-center justify-content-center">
+      <div class="font-weight-bold">{{ plato.name }}</div>
+    </div>
+    <div class="col-md-4 d-flex justify-content-center align-items-center">
+      <button class="btn btn-success my-3" style="width:100px; height: 50px;;">
+        Ordenar
+      </button>
+    </div>
+  </div>
+</div>
+
+<h1 class="text-center pt-5">BEBIDAS</h1>
+<div *ngFor="let bebida of bebidas" class="container">
+  <div class="row">
+    <div class="col-md-4 py-5 d-flex justify-content-center">
+      <img [src]="bebida.imageUrl" alt="{{ bebida.name }}" class="imagenCarta" />
+    </div>
+    <div class="col-md-4 d-flex align-items-center justify-content-center">
+      <div class="font-weight-bold">{{ bebida.name }}</div>
+    </div>
+    <div class="col-md-4 d-flex justify-content-center align-items-center">
+      <button class="btn btn-success my-3" style="width:100px; height: 50px;;">
+        Ordenar
+      </button>
+    </div>
+  </div>
 </div>
