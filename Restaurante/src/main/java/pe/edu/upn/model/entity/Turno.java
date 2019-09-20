@@ -11,19 +11,43 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "Turno")
+@Table(name = "turno")
 public class Turno {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "Turno_id")
-	private Integer turno_cod;
+	@Column(name = "turno_id")
+	private Integer turnoCod;
 
-	@Column(name = "Turno_descripcion", length = 10)
-	private String turno_descripcion;
+	@Column(name = "turno_descripcion", length = 10)
+	private String turnoDescripcion;
 
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "Menu_id")
+	@JoinColumn(name = "menu_id")
 	private Menu menu;
+
+	public Integer getTurnoCod() {
+		return turnoCod;
+	}
+
+	public void setTurnoCod(Integer turnoCod) {
+		this.turnoCod = turnoCod;
+	}
+
+	public String getTurnoDescripcion() {
+		return turnoDescripcion;
+	}
+
+	public void setTurnoDescripcion(String turnoDescripcion) {
+		this.turnoDescripcion = turnoDescripcion;
+	}
+
+	public Menu getMenu() {
+		return menu;
+	}
+
+	public void setMenu(Menu menu) {
+		this.menu = menu;
+	}
 
 
 }

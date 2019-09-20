@@ -10,16 +10,34 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "Mesa")
+@Table(name = "mesa")
 public class Mesa {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "Mesa_id")
-	private Integer mesa_cod;
+	@Column(name = "mesa_id")
+	private Integer mesaCod;
 
-	@Column(name = "Mesa_numero")
-	private Integer mesa_numero;
+	@Column(name = "mesa_numero")
+	private Integer mesaNumero;
 	@OneToOne(mappedBy = "mesa", fetch = FetchType.LAZY)
 	private Reserva reserva;
+	public Integer getMesaCod() {
+		return mesaCod;
+	}
+	public void setMesaCod(Integer mesaCod) {
+		this.mesaCod = mesaCod;
+	}
+	public Integer getMesaNumero() {
+		return mesaNumero;
+	}
+	public void setMesaNumero(Integer mesaNumero) {
+		this.mesaNumero = mesaNumero;
+	}
+	public Reserva getReserva() {
+		return reserva;
+	}
+	public void setReserva(Reserva reserva) {
+		this.reserva = reserva;
+	}
 
 }

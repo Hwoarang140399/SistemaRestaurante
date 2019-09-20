@@ -16,22 +16,22 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "VentaTotal")
+@Table(name = "venta_total")
 public class VentaTotal {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "VentaTotal_id")
-	private Integer ventaTotal_cod;
+	@Column(name = "venta_total_id")
+	private Integer ventaTotalCod;
 
 
 	@OneToMany(mappedBy = "ventaTotal", fetch = FetchType.LAZY)
 	private List<DetalleDeVenta> detalleDeVentas;
 
-	@Column(name = "VentaTotal_total")
-	private float ventaTotal_total;
+	@Column(name = "venta_total_total")
+	private float ventaTotalTotal;
 	
 	@OneToOne(cascade = { CascadeType.ALL })
-	@JoinColumn(name = "Pedido_id")
+	@JoinColumn(name = "pedido_id")
 	private Pedido pedido;
  
 	public VentaTotal() {
@@ -39,4 +39,38 @@ public class VentaTotal {
  detalleDeVentas= new ArrayList<>();
 	 
  }
+
+	public Integer getVentaTotalCod() {
+		return ventaTotalCod;
+	}
+
+	public void setVentaTotalCod(Integer ventaTotalCod) {
+		this.ventaTotalCod = ventaTotalCod;
+	}
+
+	public List<DetalleDeVenta> getDetalleDeVentas() {
+		return detalleDeVentas;
+	}
+
+	public void setDetalleDeVentas(List<DetalleDeVenta> detalleDeVentas) {
+		this.detalleDeVentas = detalleDeVentas;
+	}
+
+	public float getVentaTotalTotal() {
+		return ventaTotalTotal;
+	}
+
+	public void setVentaTotalTotal(float ventaTotalTotal) {
+		this.ventaTotalTotal = ventaTotalTotal;
+	}
+
+	public Pedido getPedido() {
+		return pedido;
+	}
+
+	public void setPedido(Pedido pedido) {
+		this.pedido = pedido;
+	}
+
+
 }

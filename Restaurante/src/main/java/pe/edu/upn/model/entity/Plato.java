@@ -13,26 +13,66 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "Plato")
+@Table(name = "plato")
 
 public class Plato {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "Plato_id")
-	private Integer plato_id;
+	@Column(name = "plato_id")
+	private Integer platoId;
 
-	@Column(name = "Plato_nombre", length = 20)
-	private String plato_nombre;
+	@Column(name = "plato_nombre", length = 20)
+	private String platoNombre;
 
-	@Column(name = "Plato_descripcion", length = 500)
-	private String plato_descripcion;
+	@Column(name = "plato_descripcion", length = 500)
+	private String platoDescripcion;
 
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "Menu_id")
+	@JoinColumn(name = "menu_id")
 	private Menu menu;
 
 	@OneToOne(cascade = { CascadeType.ALL })
-	@JoinColumn(name = "DetalleDeVenta_id")
+	@JoinColumn(name = "detalle_de_venta_id")
 	private DetalleDeVenta detalleDeVenta;
+
+	public Integer getPlatoId() {
+		return platoId;
+	}
+
+	public void setPlatoId(Integer platoId) {
+		this.platoId = platoId;
+	}
+
+	public String getPlatoNombre() {
+		return platoNombre;
+	}
+
+	public void setPlatoNombre(String platoNombre) {
+		this.platoNombre = platoNombre;
+	}
+
+	public String getPlatoDescripcion() {
+		return platoDescripcion;
+	}
+
+	public void setPlatoDescripcion(String platoDescripcion) {
+		this.platoDescripcion = platoDescripcion;
+	}
+
+	public Menu getMenu() {
+		return menu;
+	}
+
+	public void setMenu(Menu menu) {
+		this.menu = menu;
+	}
+
+	public DetalleDeVenta getDetalleDeVenta() {
+		return detalleDeVenta;
+	}
+
+	public void setDetalleDeVenta(DetalleDeVenta detalleDeVenta) {
+		this.detalleDeVenta = detalleDeVenta;
+	}
 
 }

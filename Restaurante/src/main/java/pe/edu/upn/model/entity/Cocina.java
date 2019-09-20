@@ -12,19 +12,43 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "Cocina")
+@Table(name = "cocina")
 
 public class Cocina {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "Cocina_id")
-	private Integer cocina_cod;
+	@Column(name = "cocina_id")
+	private Integer cocinaCod;
 
-	@Column(name = "Cocina_estado", length = 10)
-	private String cocina_estado;
+	@Column(name = "cocina_estado", length = 10)
+	private String cocinaEstado;
 	
 	@OneToOne(cascade = { CascadeType.ALL })
-	@JoinColumn(name = "Pedido_id")
+	@JoinColumn(name = "pedido_id")
 	private Pedido pedido;
+
+	public Integer getCocinaCod() {
+		return cocinaCod;
+	}
+
+	public void setCocinaCod(Integer cocinaCod) {
+		this.cocinaCod = cocinaCod;
+	}
+
+	public String getCocinaEstado() {
+		return cocinaEstado;
+	}
+
+	public void setCocinaEstado(String cocinaEstado) {
+		this.cocinaEstado = cocinaEstado;
+	}
+
+	public Pedido getPedido() {
+		return pedido;
+	}
+
+	public void setPedido(Pedido pedido) {
+		this.pedido = pedido;
+	}
 
 }

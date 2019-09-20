@@ -12,15 +12,15 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "Pedido")
+@Table(name = "pedido")
 public class Pedido {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "Pedido_id")
-	private Integer pedido_cod;
+	@Column(name = "pedido_id")
+	private Integer pedidoCod;
 
 	@OneToOne(cascade = { CascadeType.ALL })
-	@JoinColumn(name = "Camarero_id")
+	@JoinColumn(name = "camarero_id")
 	private Camarero camarero;
 	
 	@OneToOne(mappedBy = "pedido", fetch = FetchType.LAZY)
@@ -30,6 +30,36 @@ public class Pedido {
 	private Cocina cosina;
 @OneToOne(mappedBy = "pedido",fetch = FetchType.LAZY)
 private VentaTotal ventaTotal;
+public Integer getPedidoCod() {
+	return pedidoCod;
+}
+public void setPedidoCod(Integer pedidoCod) {
+	this.pedidoCod = pedidoCod;
+}
+public Camarero getCamarero() {
+	return camarero;
+}
+public void setCamarero(Camarero camarero) {
+	this.camarero = camarero;
+}
+public Consumidor getConsumidor() {
+	return consumidor;
+}
+public void setConsumidor(Consumidor consumidor) {
+	this.consumidor = consumidor;
+}
+public Cocina getCosina() {
+	return cosina;
+}
+public void setCosina(Cocina cosina) {
+	this.cosina = cosina;
+}
+public VentaTotal getVentaTotal() {
+	return ventaTotal;
+}
+public void setVentaTotal(VentaTotal ventaTotal) {
+	this.ventaTotal = ventaTotal;
+}
 
 }
 	

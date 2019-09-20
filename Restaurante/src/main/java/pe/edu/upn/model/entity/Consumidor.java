@@ -16,27 +16,27 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "Consumidor")
+@Table(name = "consumidor")
 public class Consumidor {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "Consumidor_id")
-	private Integer consumidor_cod;
+	@Column(name = "consumidor_id")
+	private Integer consumidorCod;
 
-	@Column(name = "Consumidor_dni", length = 8)
-	private String consumidor_dni;
+	@Column(name = "consumidor_dni", length = 8)
+	private String consumidorDni;
 
-	@Column(name = "Consumidor_nombre", length = 20)
-	private String condumidor_nombre;
+	@Column(name = "consumidor_nombre", length = 20)
+	private String consumidorNombre;
 
-	@Column(name = "Consumidor_apellidos", length = 40)
-	private String condumidor_apellidos;
+	@Column(name = "consumidor_apellidos", length = 40)
+	private String condumidorApellidos;
 
 	@OneToMany(mappedBy = "consumidor", fetch = FetchType.LAZY)
 	private List<Reserva> reservas;
 
 	@OneToOne(cascade = { CascadeType.ALL })
-	@JoinColumn(name = "Pedido_id")
+	@JoinColumn(name = "pedido_id")
 	private Pedido pedido;
 
 	@OneToOne(mappedBy = "consumidor", fetch = FetchType.LAZY)
@@ -47,5 +47,61 @@ public class Consumidor {
 		
 reservas = new ArrayList<>();
 }
+
+	public Integer getConsumidorCod() {
+		return consumidorCod;
+	}
+
+	public void setConsumidorCod(Integer consumidorCod) {
+		this.consumidorCod = consumidorCod;
+	}
+
+	public String getConsumidorDni() {
+		return consumidorDni;
+	}
+
+	public void setConsumidorDni(String consumidorDni) {
+		this.consumidorDni = consumidorDni;
+	}
+
+	public String getConsumidorNombre() {
+		return consumidorNombre;
+	}
+
+	public void setConsumidorNombre(String consumidorNombre) {
+		this.consumidorNombre = consumidorNombre;
+	}
+
+	public String getCondumidorApellidos() {
+		return condumidorApellidos;
+	}
+
+	public void setCondumidorApellidos(String condumidorApellidos) {
+		this.condumidorApellidos = condumidorApellidos;
+	}
+
+	public List<Reserva> getReservas() {
+		return reservas;
+	}
+
+	public void setReservas(List<Reserva> reservas) {
+		this.reservas = reservas;
+	}
+
+	public Pedido getPedido() {
+		return pedido;
+	}
+
+	public void setPedido(Pedido pedido) {
+		this.pedido = pedido;
+	}
+
+	public Usuario getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
+	}
 	
 }

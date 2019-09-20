@@ -13,19 +13,43 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "Reserva")
+@Table(name = "reserva")
 public class Reserva {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "Reserva_id")
-	private Integer reserva_cod;
+	@Column(name = "reserva_id")
+	private Integer reservaCod;
 
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "Consumidor_id")
+	@JoinColumn(name = "consumidor_id")
 	private Consumidor consumidor;
 
 	@OneToOne(cascade = { CascadeType.ALL })
-	@JoinColumn(name = "Mesa_id")
+	@JoinColumn(name = "mesa_id")
 	private Mesa mesa;
+
+	public Integer getReservaCod() {
+		return reservaCod;
+	}
+
+	public void setReservaCod(Integer reservaCod) {
+		this.reservaCod = reservaCod;
+	}
+
+	public Consumidor getConsumidor() {
+		return consumidor;
+	}
+
+	public void setConsumidor(Consumidor consumidor) {
+		this.consumidor = consumidor;
+	}
+
+	public Mesa getMesa() {
+		return mesa;
+	}
+
+	public void setMesa(Mesa mesa) {
+		this.mesa = mesa;
+	}
 
 }
