@@ -5,11 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AppPlatoComponent } from './components/app-plato/app-plato.component';
 import { AppCardComponent } from './components/app-card/app-card.component';
+import { AppStatisticsComponent } from './components/app-statistics/app-statistics.component';
 
 
 //Viewss
 import { HomeComponent } from './pages/home/home.component';
 import { CartaComponent } from './pages/carta/carta.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
 
 
 @NgModule({
@@ -18,7 +20,9 @@ import { CartaComponent } from './pages/carta/carta.component';
     AppPlatoComponent,
     AppCardComponent,
     HomeComponent,
-    CartaComponent
+    CartaComponent,
+    AppStatisticsComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

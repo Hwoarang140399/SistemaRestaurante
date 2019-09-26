@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 // import { AppPlatoComponent } from './components/app-plato/app-plato.component';
 import { HomeComponent } from './pages/home/home.component';
 import { CartaComponent } from './pages/carta/carta.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
 
 
 const routes: Routes = [
@@ -14,7 +15,12 @@ const routes: Routes = [
   {
     path: 'carta',
     component: CartaComponent
+  },
+  {
+    path: 'dashboard',
+    component: DashboardComponent
   }
+
 
   // {
   //   path: 'not-found',
