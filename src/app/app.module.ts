@@ -12,6 +12,7 @@ import { AppStatisticsComponent } from './components/app-statistics/app-statisti
 import { HomeComponent } from './pages/home/home.component';
 import { CartaComponent } from './pages/carta/carta.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { LoginComponent } from './pages/login/login/login.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
     HomeComponent,
     CartaComponent,
     AppStatisticsComponent,
-    DashboardComponent
+    DashboardComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
