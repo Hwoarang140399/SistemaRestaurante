@@ -21,6 +21,7 @@ import { MesasComponent } from './pages/mesas/mesas.component';
 import { ReporteComponent } from './pages/reporte/reporte.component';
 import { StockComponent } from './pages/stock/stock.component';
 import { FacturaComponent } from './pages/factura/factura.component';
+import { AppTableComponent } from './components/app-table/app-table.component';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { FacturaComponent } from './pages/factura/factura.component';
     MesasComponent,
     ReporteComponent,
     StockComponent,
-    FacturaComponent
+    FacturaComponent,
+    AppTableComponent
   ],
   imports: [
     BrowserModule,
