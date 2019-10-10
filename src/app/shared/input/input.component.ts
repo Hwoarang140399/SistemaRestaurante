@@ -7,7 +7,8 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class InputComponent implements OnInit {
   @Input() label: String;
-
+  public usuario: String;
+  public password: String;
   constructor() { }
 
   ngOnInit() {

@@ -14,8 +14,13 @@ import { InputComponent } from './shared/input/input.component';
 //Viewss
 import { HomeComponent } from './pages/home/home.component';
 import { CartaComponent } from './pages/carta/carta.component';
-import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { LoginComponent } from './pages/login/login.component';
+import { NotfoundComponent } from './pages/notfound/notfound.component';
+import { ReservaComponent } from './pages/reserva/reserva.component';
+import { MesasComponent } from './pages/mesas/mesas.component';
+import { ReporteComponent } from './pages/reporte/reporte.component';
+import { StockComponent } from './pages/stock/stock.component';
+import { FacturaComponent } from './pages/factura/factura.component';
 
 
 @NgModule({
@@ -26,9 +31,14 @@ import { LoginComponent } from './pages/login/login.component';
     HomeComponent,
     CartaComponent,
     AppStatisticsComponent,
-    DashboardComponent,
     LoginComponent,
-    InputComponent
+    InputComponent,
+    NotfoundComponent,
+    ReservaComponent,
+    MesasComponent,
+    ReporteComponent,
+    StockComponent,
+    FacturaComponent
   ],
   imports: [
     BrowserModule,
