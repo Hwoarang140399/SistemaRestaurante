@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { ChartsModule } from 'ng2-charts'
 
 //Compoments
 import { AppRoutingModule } from './app-routing.module';
@@ -7,6 +8,7 @@ import { AppComponent } from './app.component';
 import { AppPlatoComponent } from './components/app-plato/app-plato.component';
 import { AppCardComponent } from './components/app-card/app-card.component';
 import { AppStatisticsComponent } from './components/app-statistics/app-statistics.component';
+import { AppTableComponent } from './components/app-table/app-table.component';
 
 //Shared
 import { InputComponent } from './shared/input/input.component';
@@ -21,7 +23,7 @@ import { MesasComponent } from './pages/mesas/mesas.component';
 import { ReporteComponent } from './pages/reporte/reporte.component';
 import { StockComponent } from './pages/stock/stock.component';
 import { FacturaComponent } from './pages/factura/factura.component';
-import { AppTableComponent } from './components/app-table/app-table.component';
+import { AppChartComponent } from './components/app-chart/app-chart.component';
 
 
 @NgModule({
@@ -40,11 +42,13 @@ import { AppTableComponent } from './components/app-table/app-table.component';
     ReporteComponent,
     StockComponent,
     FacturaComponent,
-    AppTableComponent
+    AppTableComponent,
+    AppChartComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
