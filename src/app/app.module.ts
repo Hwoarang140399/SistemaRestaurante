@@ -25,6 +25,7 @@ import { StockComponent } from './pages/stock/stock.component';
 import { FacturaComponent } from './pages/factura/factura.component';
 import { AppChartComponent } from './components/app-chart/app-chart.component';
 import { TheNavbarComponent } from './shared/the-navbar/the-navbar.component';
+import { TheEggsComponent } from './shared/the-eggs/the-eggs.component';
 
 
 @NgModule({
@@ -45,6 +46,7 @@ import { TheNavbarComponent } from './shared/the-navbar/the-navbar.component';
     AppTableComponent,
     AppChartComponent,
     TheNavbarComponent,
+    TheEggsComponent,
   ],
   imports: [
     BrowserModule,
