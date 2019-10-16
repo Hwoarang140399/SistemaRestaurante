@@ -11,7 +11,6 @@ import { AppStatisticsComponent } from './components/app-statistics/app-statisti
 import { AppTableComponent } from './components/app-table/app-table.component';
 
 //Shared
-import { TheStarsComponent } from './shared/the-stars/the-stars.component';
 
 
 //Viewss
@@ -25,6 +24,7 @@ import { ReporteComponent } from './pages/reporte/reporte.component';
 import { StockComponent } from './pages/stock/stock.component';
 import { FacturaComponent } from './pages/factura/factura.component';
 import { AppChartComponent } from './components/app-chart/app-chart.component';
+import { TheNavbarComponent } from './shared/the-navbar/the-navbar.component';
 
 
 @NgModule({
@@ -44,7 +44,7 @@ import { AppChartComponent } from './components/app-chart/app-chart.component';
     FacturaComponent,
     AppTableComponent,
     AppChartComponent,
-    TheStarsComponent,
+    TheNavbarComponent,
   ],
   imports: [
     BrowserModule,
