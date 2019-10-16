@@ -11,7 +11,8 @@ import { AppStatisticsComponent } from './components/app-statistics/app-statisti
 import { AppTableComponent } from './components/app-table/app-table.component';
 
 //Shared
-import { InputComponent } from './shared/input/input.component';
+import { TheStarsComponent } from './shared/the-stars/the-stars.component';
+
 
 //Viewss
 import { HomeComponent } from './pages/home/home.component';
@@ -35,7 +36,6 @@ import { AppChartComponent } from './components/app-chart/app-chart.component';
     CartaComponent,
     AppStatisticsComponent,
     LoginComponent,
-    InputComponent,
     NotfoundComponent,
     ReservaComponent,
     MesasComponent,
@@ -43,7 +43,8 @@ import { AppChartComponent } from './components/app-chart/app-chart.component';
     StockComponent,
     FacturaComponent,
     AppTableComponent,
-    AppChartComponent
+    AppChartComponent,
+    TheStarsComponent,
   ],
   imports: [
     BrowserModule,

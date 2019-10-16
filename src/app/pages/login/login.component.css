@@ -1,0 +1,10 @@
+input {
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-bottom: 1px solid black;
+}
+
+label {
+  font-weight: bold;
+}
