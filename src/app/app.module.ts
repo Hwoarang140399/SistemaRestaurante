@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ChartsModule } from 'ng2-charts'
+import { FormsModule } from '@angular/forms';
 
 //Compoments
 import { AppRoutingModule } from './app-routing.module';
@@ -26,6 +27,8 @@ import { FacturaComponent } from './pages/factura/factura.component';
 import { AppChartComponent } from './components/app-chart/app-chart.component';
 import { TheNavbarComponent } from './shared/the-navbar/the-navbar.component';
 import { TheEggsComponent } from './shared/the-eggs/the-eggs.component';
+import { TheButtonComponent } from './shared/the-button/the-button.component';
+import { TheFooterComponent } from './shared/the-footer/the-footer.component';
 
 
 @NgModule({
@@ -47,11 +50,14 @@ import { TheEggsComponent } from './shared/the-eggs/the-eggs.component';
     AppChartComponent,
     TheNavbarComponent,
     TheEggsComponent,
+    TheButtonComponent,
+    TheFooterComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ChartsModule
+    ChartsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,46 +1,39 @@
-<div *ngFor="let plato of platos">
-  <div class="card" style="width: 18rem;">
-    <img [src]="plato.image" class="card-img-top" alt="{{ plato.name }}" />
-    <div class="card-body">
-      <h5 class="card-title">{{ plato.id }}</h5>
-      <p class="card-text">
-        {{ plato.name }}
-      </p>
-      <a href="#" class="btn btn-primary">Ordenar</a>
+<h1 class="text-center pt-5">Platos a la carta</h1>
+<div *ngFor="let plato of platos" class="container">
+  <div class="row">
+    <div class="col-md-4 py-5 d-flex justify-content-center">
+      <img
+        [src]="plato.image"
+        alt="{{ plato.name }}"
+        class="imagenCarta rounded-circle"
+      />
+    </div>
+    <div class="col-md-4 d-flex align-items-center justify-content-center">
+      <div class="font-weight-bold textoPedido">{{ plato.name }}</div>
+    </div>
+    <div class="col-md-4 d-flex justify-content-center align-items-center">
+      <the-button action="Ordenar" (click)="ordenarPedido()"></the-button>
     </div>
   </div>
 </div>
 
-<!-- <h1 class="text-center pt-5">PLATOS PRINCIPALES</h1>
-<div *ngFor="let plato of platos" class="container">
-  <div class="row">
-    <div class="col-md-4 py-5 d-flex justify-content-center">
-      <img [src]="plato.image" alt="{{ plato.name }}" class="imagenCarta" />
-    </div>
-    <div class="col-md-4 d-flex align-items-center justify-content-center">
-      <div class="font-weight-bold">{{ plato.name }}</div>
-    </div>
-    <div class="col-md-4 d-flex justify-content-center align-items-center">
-      <button class="btn btn-success my-3" style="width:100px; height: 50px;;">
-        Ordenar
-      </button>
-    </div>
-  </div>
-</div>
+<hr />
 
 <h1 class="text-center pt-5">BEBIDAS</h1>
 <div *ngFor="let bebida of bebidas" class="container">
   <div class="row">
     <div class="col-md-4 py-5 d-flex justify-content-center">
-      <img [src]="bebida.image" alt="{{ bebida.name }}" class="imagenCarta" />
+      <img
+        [src]="bebida.image"
+        alt="{{ bebida.name }}"
+        class="imagenCarta rounded-circle"
+      />
     </div>
     <div class="col-md-4 d-flex align-items-center justify-content-center">
-      <div class="font-weight-bold">{{ bebida.name }}</div>
+      <div class="font-weight-bold textoPedido">{{ bebida.name }}</div>
     </div>
     <div class="col-md-4 d-flex justify-content-center align-items-center">
-      <button class="btn btn-success my-3" style="width:100px; height: 50px;;">
-        Ordenar
-      </button>
+      <the-button action="Ordenar" (click)="ordenarPedido()"></the-button>
     </div>
   </div>
-</div> -->
+</div>

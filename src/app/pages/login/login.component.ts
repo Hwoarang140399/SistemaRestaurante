@@ -7,9 +7,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  public erroneo: boolean;
+  public user: any;
+  constructor() {
+    this.erroneo = false;
+    this.user = {
+      nombre: '',
+      password: ''
+    }
+  }
 
   ngOnInit() {
+  }
+
+  onSubmit() {
+    if (this.user.nombre == "elcajamarquinoperu" && this.user.password == "admin") {
+      window.location.href = '/home'
+    }
+    else {
+      this.erroneo = true;
+    }
   }
 
 }

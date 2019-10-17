@@ -1,9 +1,10 @@
-/* .imagenCarta{
-  width: 250px;
+.imagenCarta {
+  width: 300px;
+  border: solid black 2px;
 }
 
-@media screen and(max-width:425px){
-  .imagenCarta{
+@media screen and(max-width:425px) {
+  .imagenCarta {
     width: 50px;
   }
-} */
+}
