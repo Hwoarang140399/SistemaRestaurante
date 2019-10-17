@@ -29,6 +29,7 @@ import { TheNavbarComponent } from './shared/the-navbar/the-navbar.component';
 import { TheEggsComponent } from './shared/the-eggs/the-eggs.component';
 import { TheButtonComponent } from './shared/the-button/the-button.component';
 import { TheFooterComponent } from './shared/the-footer/the-footer.component';
+import { AppProductsComponent } from './components/app-products/app-products.component';
 
 
 @NgModule({
@@ -52,6 +53,7 @@ import { TheFooterComponent } from './shared/the-footer/the-footer.component';
     TheEggsComponent,
     TheButtonComponent,
     TheFooterComponent,
+    AppProductsComponent,
   ],
   imports: [
     BrowserModule,
