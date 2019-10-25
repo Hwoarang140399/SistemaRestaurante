@@ -10,8 +10,14 @@ import { AppPlatoComponent } from './components/app-plato/app-plato.component';
 import { AppCardComponent } from './components/app-card/app-card.component';
 import { AppStatisticsComponent } from './components/app-statistics/app-statistics.component';
 import { AppTableComponent } from './components/app-table/app-table.component';
+import { AppChartComponent } from './components/app-chart/app-chart.component';
 
 //Shared
+import { TheNavbarComponent } from './shared/the-navbar/the-navbar.component';
+import { TheEggsComponent } from './shared/the-eggs/the-eggs.component';
+import { TheButtonComponent } from './shared/the-button/the-button.component';
+import { TheFooterComponent } from './shared/the-footer/the-footer.component';
+import { AppProductsComponent } from './components/app-products/app-products.component';
 
 
 //Viewss
@@ -24,12 +30,6 @@ import { MesasComponent } from './pages/mesas/mesas.component';
 import { ReporteComponent } from './pages/reporte/reporte.component';
 import { StockComponent } from './pages/stock/stock.component';
 import { FacturaComponent } from './pages/factura/factura.component';
-import { AppChartComponent } from './components/app-chart/app-chart.component';
-import { TheNavbarComponent } from './shared/the-navbar/the-navbar.component';
-import { TheEggsComponent } from './shared/the-eggs/the-eggs.component';
-import { TheButtonComponent } from './shared/the-button/the-button.component';
-import { TheFooterComponent } from './shared/the-footer/the-footer.component';
-import { AppProductsComponent } from './components/app-products/app-products.component';
 
 
 @NgModule({
