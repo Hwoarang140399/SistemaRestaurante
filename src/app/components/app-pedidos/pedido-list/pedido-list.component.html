@@ -1,0 +1,27 @@
+<div class="card mt-5">
+  <div class="card-body">
+    <h6 class="card-title">
+      Resumen de Pedido
+    </h6>
+    <table class="table table-sm table-hover">
+      <tbody>
+        <td>Nombre</td>
+        <td>Cantidad</td>
+        <td>Precio</td>
+        <tr *ngFor="let pedido of pedidoList">
+          <td>{{ pedido.name }}</td>
+          <td>{{ pedido.quantity }}</td>
+          <td>{{ pedido.price }}</td>
+          <td class="d-flex justify-content-between">
+            <a class="btn btn-primary text-white" (click)="onEdit(pedido)">
+              <i class="far fa-edit"></i>
+            </a>
+            <a class="btn btn-danger" (click)="onDelete(pedido.$key)">
+              <i class="fas fa-trash-alt text-white"></i>
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

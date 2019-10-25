@@ -1,0 +1,67 @@
+<div class="card mt-5">
+  <div class="card-body">
+    <form #pedidoForm="ngForm" (ngSubmit)="onSubmit(pedidoForm)">
+      <input
+        type="hidden"
+        name="$key"
+        #$key="ngModel"
+        [(ngModel)]="pedidoService.selectedPedido.$key"
+      />
+      <div class="form-group">
+        <input
+          type="text"
+          class="form-control"
+          name="name"
+          #name="ngModel"
+          [(ngModel)]="pedidoService.selectedPedido.name"
+          placeholder="Nombre del plato"
+        />
+      </div>
+      <div class="form-group">
+        <input
+          type="text"
+          class="form-control"
+          name="category"
+          #category="ngModel"
+          [(ngModel)]="pedidoService.selectedPedido.category"
+          placeholder="Categoria del plato"
+        />
+      </div>
+      <div class="form-group">
+        <input
+          type="number"
+          class="form-control"
+          name="price"
+          #price="ngModel"
+          [(ngModel)]="pedidoService.selectedPedido.price"
+          placeholder="Precio del plato"
+        />
+      </div>
+      <div class="form-group">
+        <input
+          type="number"
+          class="form-control"
+          name="quantity"
+          #quantity="ngModel"
+          [(ngModel)]="pedidoService.selectedPedido.quantity"
+          placeholder="Cantidad de platos"
+        />
+      </div>
+      <div class="d-flex justify-content-around form-group">
+        <button class="btn btn-primary" type="submit">
+          Agregar Pedido
+          <i class="fas fa-plus-circle"></i>
+        </button>
+
+        <button
+          class="btn btn-secondary"
+          type="reset"
+          (click)="resetForm(pedidoForm)"
+        >
+          Limpiar Pedido
+          <i class="fas fa-sync-alt"></i>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
