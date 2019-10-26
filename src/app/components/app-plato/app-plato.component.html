@@ -1,39 +1,41 @@
 <h1 class="text-center pt-5">Platos a la carta</h1>
-<div *ngFor="let plato of platos" class="container">
-  <div class="row">
-    <div class="col-md-4 py-5 d-flex justify-content-center">
-      <img
-        [src]="plato.image"
-        alt="{{ plato.name }}"
-        class="imagenCarta rounded-circle"
-      />
+<hr />
+<div *ngFor="let plato of platos" class="container pb-3">
+  <div class="row font-weight-bold">
+    <div class="col-md-5">{{ plato.name }}</div>
+    <div class="col-md-5">{{ plato.id }}</div>
+    <div class="col-md-2">{{ plato.price }}</div>
+  </div>
+</div>
+
+<h1 class="text-center pt-5">Bebidas</h1>
+<hr />
+<div *ngFor="let bebida of bebidas" class="container pb-3">
+  <div class="row font-weight-bold">
+    <div class="col-md-5">
+      {{ bebida.name }}
     </div>
-    <div class="col-md-4 d-flex align-items-center justify-content-center">
-      <div class="font-weight-bold textoPedido">{{ plato.name }}</div>
+    <div class="col-md-5">
+      {{ bebida.id }}
     </div>
-    <div class="col-md-4 d-flex justify-content-center align-items-center">
-      <the-button action="Ordenar" (click)="ordenarPedido()"></the-button>
+    <div class="col-md-2">
+      {{ bebida.price }}
     </div>
   </div>
 </div>
 
+<h1 class="text-center pt-5">Postres</h1>
 <hr />
-
-<h1 class="text-center pt-5">BEBIDAS</h1>
-<div *ngFor="let bebida of bebidas" class="container">
-  <div class="row">
-    <div class="col-md-4 py-5 d-flex justify-content-center">
-      <img
-        [src]="bebida.image"
-        alt="{{ bebida.name }}"
-        class="imagenCarta rounded-circle"
-      />
+<div *ngFor="let postre of postres" class="container pb-3">
+  <div class="row font-weight-bold">
+    <div class="col-md-5">
+      {{ postre.name }}
     </div>
-    <div class="col-md-4 d-flex align-items-center justify-content-center">
-      <div class="font-weight-bold textoPedido">{{ bebida.name }}</div>
+    <div class="col-md-5">
+      {{ postre.id }}
     </div>
-    <div class="col-md-4 d-flex justify-content-center align-items-center">
-      <the-button action="Ordenar" (click)="ordenarPedido()"></the-button>
+    <div class="col-md-2">
+      {{ postre.price }}
     </div>
   </div>
 </div>
