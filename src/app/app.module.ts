@@ -39,6 +39,7 @@ import { MesasComponent } from './pages/mesas/mesas.component';
 import { ReporteComponent } from './pages/reporte/reporte.component';
 import { StockComponent } from './pages/stock/stock.component';
 import { FacturaComponent } from './pages/factura/factura.component';
+import { AppPdfComponent } from './components/app-pdf/app-pdf.component';
 
 
 @NgModule({
@@ -65,6 +66,7 @@ import { FacturaComponent } from './pages/factura/factura.component';
     AppPedidosComponent,
     PedidoListComponent,
     PedidoComponent,
+    AppPdfComponent,
   ],
   imports: [
     BrowserModule,
