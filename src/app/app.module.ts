@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 
 //services
 import { PedidoService } from './services/pedido.service'
+import { ProductoService } from './services/producto.service';
 
 //firebase
 import { AngularFireModule } from 'angularfire2'
@@ -39,6 +40,9 @@ import { ReporteComponent } from './pages/reporte/reporte.component';
 import { StockComponent } from './pages/stock/stock.component';
 import { FacturaComponent } from './pages/factura/factura.component';
 import { BalanceComponent } from './pages/balance/balance.component';
+import { AppProductosComponent } from './components/app-productos/app-productos.component';
+import { ProductoComponent } from './components/app-productos/producto/producto.component';
+import { ProductoListComponent } from './components/app-productos/producto-list/producto-list.component';
 
 
 @NgModule({
@@ -64,7 +68,10 @@ import { BalanceComponent } from './pages/balance/balance.component';
     PedidoListComponent,
     PedidoComponent,
     AppPdfComponent,
-    BalanceComponent
+    BalanceComponent,
+    AppProductosComponent,
+    ProductoComponent,
+    ProductoListComponent
   ],
   imports: [
     BrowserModule,
@@ -74,7 +81,7 @@ import { BalanceComponent } from './pages/balance/balance.component';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule
   ],
-  providers: [PedidoService],
+  providers: [PedidoService, ProductoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
