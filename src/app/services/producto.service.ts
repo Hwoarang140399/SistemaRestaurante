@@ -19,7 +19,7 @@ export class ProductoService {
     this.productoList.push({
       name: producto.name,
       category: producto.category,
-      proider: producto.provider,
+      provider: producto.provider,
       price: producto.price * producto.quantity,
       quantity: producto.quantity
     })
@@ -29,7 +29,7 @@ export class ProductoService {
     this.productoList.update(producto.$key, {
       name: producto.name,
       category: producto.category,
-      proider: producto.provider,
+      provider: producto.provider,
       price: producto.price * producto.quantity,
       quantity: producto.quantity
     })
