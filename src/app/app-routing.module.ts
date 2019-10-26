@@ -7,6 +7,7 @@ import { ReservaComponent } from './pages/reserva/reserva.component';
 import { ReporteComponent } from './pages/reporte/reporte.component';
 import { StockComponent } from './pages/stock/stock.component';
 import { FacturaComponent } from './pages/factura/factura.component';
+import { BalanceComponent } from './pages/balance/balance.component';
 
 // import { LoginComponent } from './pages/login/login.component';
 
@@ -16,7 +17,7 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
-    path: 'carta',
+    path: 'pedidos',
     component: CartaComponent
   },
   {
@@ -26,6 +27,10 @@ const routes: Routes = [
   {
     path: 'reporte',
     component: ReporteComponent
+  },
+  {
+    path: 'balance',
+    component: BalanceComponent
   },
   {
     path: 'stock',

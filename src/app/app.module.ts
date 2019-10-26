@@ -16,12 +16,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AppPlatoComponent } from './components/app-plato/app-plato.component';
 import { AppCardComponent } from './components/app-card/app-card.component';
-import { AppStatisticsComponent } from './components/app-statistics/app-statistics.component';
 import { AppTableComponent } from './components/app-table/app-table.component';
 import { AppChartComponent } from './components/app-chart/app-chart.component';
 import { AppPedidosComponent } from './components/app-pedidos/app-pedidos.component';
 import { PedidoListComponent } from './components/app-pedidos/pedido-list/pedido-list.component';
 import { PedidoComponent } from './components/app-pedidos/pedido/pedido.component';
+import { AppPdfComponent } from './components/app-pdf/app-pdf.component';
 
 //Shared
 import { TheNavbarComponent } from './shared/the-navbar/the-navbar.component';
@@ -35,11 +35,10 @@ import { CartaComponent } from './pages/carta/carta.component';
 import { LoginComponent } from './pages/login/login.component';
 import { NotfoundComponent } from './pages/notfound/notfound.component';
 import { ReservaComponent } from './pages/reserva/reserva.component';
-import { MesasComponent } from './pages/mesas/mesas.component';
 import { ReporteComponent } from './pages/reporte/reporte.component';
 import { StockComponent } from './pages/stock/stock.component';
 import { FacturaComponent } from './pages/factura/factura.component';
-import { AppPdfComponent } from './components/app-pdf/app-pdf.component';
+import { BalanceComponent } from './pages/balance/balance.component';
 
 
 @NgModule({
@@ -49,11 +48,9 @@ import { AppPdfComponent } from './components/app-pdf/app-pdf.component';
     AppCardComponent,
     HomeComponent,
     CartaComponent,
-    AppStatisticsComponent,
     LoginComponent,
     NotfoundComponent,
     ReservaComponent,
-    MesasComponent,
     ReporteComponent,
     StockComponent,
     FacturaComponent,
@@ -67,6 +64,7 @@ import { AppPdfComponent } from './components/app-pdf/app-pdf.component';
     PedidoListComponent,
     PedidoComponent,
     AppPdfComponent,
+    BalanceComponent
   ],
   imports: [
     BrowserModule,
