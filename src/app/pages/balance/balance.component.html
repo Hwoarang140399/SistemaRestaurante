@@ -1,41 +1,169 @@
 <the-navbar></the-navbar>
-<h1 class="text-center font-weight-bold py-3">
-  Facturación electrónica
-</h1>
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Plato</th>
-      <th scope="col">Precio</th>
-      <th scope="col">Mes más pedido</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr style="background-color: #FFE29A;">
-      <th scope="row">1</th>
-      <td>Arroz Chaufa</td>
-      <td>15</td>
-      <td>Junio</td>
-    </tr>
-    <tr style="background-color: #6060D5;">
-      <th scope="row">2</th>
-      <td>Arroz con pato</td>
-      <td>18</td>
-      <td>Marzo</td>
-    </tr>
-    <tr style="background-color: #FFA1B5;">
-      <th scope="row">3</th>
-      <td>Pollo a la brasa</td>
-      <td>10</td>
-      <td>Febrero</td>
-    </tr>
-    <tr style="background-color: #86C7F3;">
-      <th scope="row">3</th>
-      <td>Seco a la norteña</td>
-      <td>14</td>
-      <td>Setiembre</td>
-    </tr>
-  </tbody>
-</table>
-<app-chart></app-chart>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card my-5">
+        <div class="card-body">
+          <h4 class="card-title">Platos más vendidos</h4>
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Nº</th>
+                <th scope="col">Plato</th>
+                <th scope="col">Precio</th>
+                <th scope="col">Mes más pedido</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="background-color: #FFE29A;">
+                <th scope="row">1</th>
+                <td>Arroz Chaufa</td>
+                <td>15</td>
+                <td>Junio</td>
+              </tr>
+              <tr style="background-color: #6060D5;">
+                <th scope="row">2</th>
+                <td>Arroz con pato</td>
+                <td>18</td>
+                <td>Marzo</td>
+              </tr>
+              <tr style="background-color: #FFA1B5;">
+                <th scope="row">3</th>
+                <td>Pollo a la brasa</td>
+                <td>10</td>
+                <td>Febrero</td>
+              </tr>
+              <tr style="background-color: #86C7F3;">
+                <th scope="row">4</th>
+                <td>Seco a la norteña</td>
+                <td>14</td>
+                <td>Setiembre</td>
+              </tr>
+            </tbody>
+          </table>
+          <hr />
+          <app-chart></app-chart>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card my-5">
+        <div class="card-body">
+          <h4 class="card-title">Empleados del mes</h4>
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Nº</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Nº de platos vendidos</th>
+                <th scope="col">Mejor mes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="background-color: #FFE29A;">
+                <th scope="row">1</th>
+                <td>Mario Torres</td>
+                <td>40</td>
+                <td>Junio</td>
+              </tr>
+              <tr style="background-color: #F1F2F4;">
+                <th scope="row">2</th>
+                <td>Valentina Rodriguez</td>
+                <td>48</td>
+                <td>Julio</td>
+              </tr>
+              <tr style="background-color: #FFA1B5;">
+                <th scope="row">3</th>
+                <td>Juan Arista</td>
+                <td>52</td>
+                <td>Agosto</td>
+              </tr>
+              <tr style="background-color: #86C7F3;">
+                <th scope="row">4</th>
+                <td>Mario de la Cruz</td>
+                <td>68</td>
+                <td>Setiembre</td>
+              </tr>
+            </tbody>
+          </table>
+          <hr />
+          <app-empleadomes></app-empleadomes>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card ">
+        <div class="card-body">
+          <h4 class="card-title">
+            Sección de la carta más consumida
+          </h4>
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Nº</th>
+                <th scope="col">Moda</th>
+                <th scope="col">Porcentaje</th>
+                <th scope="col">Año de evaluación</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="background-color: #FFA1B5;">
+                <th scope="row">1</th>
+                <td>Menú</td>
+                <td>90%</td>
+                <td>2018</td>
+              </tr>
+              <tr style="background-color: #6060D5;">
+                <th scope="row">2</th>
+                <td>Platos a la carta</td>
+                <td>80%</td>
+                <td>2019</td>
+              </tr>
+            </tbody>
+          </table>
+          <hr />
+          <app-trend></app-trend>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card ">
+        <div class="card-body">
+          <h4 class="card-title">
+            Sección de la carta más consumida
+          </h4>
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Nº</th>
+                <th scope="col">Horario</th>
+                <th scope="col">Cantidad en S/.</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="background-color: #FFA1B5;">
+                <th scope="row">1</th>
+                <td>Menú</td>
+                <td>90%</td>
+              </tr>
+              <tr style="background-color: #6060D5;">
+                <th scope="row">2</th>
+                <td>Platos a la carta</td>
+                <td>80%</td>
+              </tr>
+              <tr style="background-color: #FFE29A;">
+                <th scope="row">2</th>
+                <td>Platos a la carta</td>
+                <td>80%</td>
+              </tr>
+            </tbody>
+          </table>
+          <hr />
+          <app-time></app-time>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

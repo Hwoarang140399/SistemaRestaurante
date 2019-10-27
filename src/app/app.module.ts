@@ -18,7 +18,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AppPlatoComponent } from './components/app-plato/app-plato.component';
 import { AppCardComponent } from './components/app-card/app-card.component';
-import { AppChartComponent } from './components/app-chart/app-chart.component';
+import { AppChartComponent } from './components/statistics/app-chart/app-chart.component';
 import { AppPedidosComponent } from './components/app-pedidos/app-pedidos.component';
 import { PedidoListComponent } from './components/app-pedidos/pedido-list/pedido-list.component';
 import { PedidoComponent } from './components/app-pedidos/pedido/pedido.component';
@@ -28,6 +28,11 @@ import { ProductoComponent } from './components/app-productos/producto/producto.
 import { ProductoListComponent } from './components/app-productos/producto-list/producto-list.component';
 import { AppointmentComponent } from './components/app-appointments/appointment/appointment.component';
 import { AppointmentListComponent } from './components/app-appointments/appointment-list/appointment-list.component';
+import { AppAppointmentsComponent } from './components/app-appointments/app-appointments.component';
+import { AppEmpleadomesComponent } from './components/statistics/app-empleadomes/app-empleadomes.component';
+import { AppTrendComponent } from './components/statistics/app-trend/app-trend.component';
+import { AppTimeComponent } from './components/statistics/app-time/app-time.component';
+
 
 //Shared
 import { TheNavbarComponent } from './shared/the-navbar/the-navbar.component';
@@ -45,7 +50,6 @@ import { ReporteComponent } from './pages/reporte/reporte.component';
 import { StockComponent } from './pages/stock/stock.component';
 import { FacturaComponent } from './pages/factura/factura.component';
 import { BalanceComponent } from './pages/balance/balance.component';
-import { AppAppointmentsComponent } from './components/app-appointments/app-appointments.component';
 
 
 
@@ -79,6 +83,9 @@ import { AppAppointmentsComponent } from './components/app-appointments/app-appo
     AppAppointmentsComponent,
     AppointmentComponent,
     AppointmentListComponent,
+    AppEmpleadomesComponent,
+    AppTrendComponent,
+    AppTimeComponent,
   ],
   imports: [
     BrowserModule,
