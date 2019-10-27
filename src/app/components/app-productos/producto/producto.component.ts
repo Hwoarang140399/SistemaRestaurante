@@ -22,7 +22,7 @@ export class ProductoComponent implements OnInit {
       this.productoService.insertProducto(productoForm.value);
     }
     else
-      this.productoService.insertProducto(productoForm.value);
+      this.productoService.updateProducto(productoForm.value);
     this.resetForm(productoForm);
   }
   resetForm(productoForm?: NgForm) {

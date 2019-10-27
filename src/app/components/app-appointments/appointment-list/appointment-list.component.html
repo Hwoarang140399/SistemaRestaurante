@@ -1,0 +1,33 @@
+<div class="card mt-5">
+  <div class="card-body">
+    <h6 class="card-title font-weight-bold">
+      Resumen de Reservas
+    </h6>
+    <table class="table table-sm table-hover">
+      <tbody>
+        <td class="font-weight-bold ">Encargado</td>
+        <td class="font-weight-bold ">Cliente</td>
+        <td class="font-weight-bold ">N° de personas</td>
+        <td class="font-weight-bold ">Precio de reserva</td>
+        <td class="font-weight-bold ">Hora</td>
+        <td class="font-weight-bold ">Fecha</td>
+        <tr *ngFor="let appointment of appointmentList">
+          <td>{{ appointment.name }}</td>
+          <td>{{ appointment.client }}</td>
+          <td>{{ appointment.quantity }}</td>
+          <td>{{ appointment.price }}</td>
+          <td>{{ appointment.time }}</td>
+          <td>{{ appointment.date }}</td>
+          <td class="d-flex justify-content-between">
+            <a class="btn btn-primary text-white" (click)="onEdit(appointment)">
+              <i class="far fa-edit"></i>
+            </a>
+            <a class="btn btn-danger" (click)="onDelete(appointment.$key)">
+              <i class="fas fa-trash-alt text-white"></i>
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

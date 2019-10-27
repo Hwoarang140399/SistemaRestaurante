@@ -22,7 +22,7 @@ export class PedidoComponent implements OnInit {
       this.pedidoService.insertPedido(pedidoForm.value);
     }
     else
-      this.pedidoService.insertPedido(pedidoForm.value);
+      this.pedidoService.updatePedido(pedidoForm.value);
     this.resetForm(pedidoForm);
   }
 

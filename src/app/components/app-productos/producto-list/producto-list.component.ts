@@ -26,7 +26,6 @@ export class ProductoListComponent implements OnInit {
 
   onEdit(producto: Producto) {
     this.productoService.selectedProducto = Object.assign({}, producto);
-
   }
 
   onDelete($key: string) {

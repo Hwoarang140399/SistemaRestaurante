@@ -1,0 +1,94 @@
+<div class="card mt-5">
+  <div class="card-body">
+    <h6>Datos de la Reserva</h6>
+    <form #appointmentForm="ngForm" (ngSubmit)="onSubmit(appointmentForm)">
+      <div class="row">
+        <div class="col-md-6">
+          <input
+            type="hidden"
+            name="$key"
+            #$key="ngModel"
+            [(ngModel)]="appointmentService.selectedAppointment.$key"
+          />
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              name="name"
+              #name="ngModel"
+              [(ngModel)]="appointmentService.selectedAppointment.name"
+              placeholder="Nombre del Encargado"
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              name="client"
+              #client="ngModel"
+              [(ngModel)]="appointmentService.selectedAppointment.client"
+              placeholder="Nombre del Cliente"
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              name="time"
+              #time="ngModel"
+              [(ngModel)]="appointmentService.selectedAppointment.time"
+              placeholder="Horario de reserva"
+            />
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <input
+              type="date"
+              class="form-control"
+              name="date"
+              #date="ngModel"
+              [(ngModel)]="appointmentService.selectedAppointment.date"
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="number"
+              class="form-control"
+              name="price"
+              #price="ngModel"
+              [(ngModel)]="appointmentService.selectedAppointment.price"
+              placeholder="Costo de la reserva"
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="number"
+              class="form-control"
+              name="quantity"
+              #quantity="ngModel"
+              [(ngModel)]="appointmentService.selectedAppointment.quantity"
+              placeholder="Cantidad de personas"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="d-flex justify-content-around form-group">
+        <button class="btn btn-primary" type="submit">
+          Agregar Producto
+          <i class="fas fa-plus-circle"></i>
+        </button>
+
+        <button
+          class="btn btn-secondary"
+          type="reset"
+          (click)="resetForm(AppointmentForm)"
+        >
+          Limpiar Tabla
+          <i class="fas fa-sync-alt"></i>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

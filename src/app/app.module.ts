@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
 //services
 import { PedidoService } from './services/pedido.service'
 import { ProductoService } from './services/producto.service';
+import { AppointmentService } from './services/appointment.service';
 
 //firebase
 import { AngularFireModule } from 'angularfire2'
@@ -17,12 +18,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AppPlatoComponent } from './components/app-plato/app-plato.component';
 import { AppCardComponent } from './components/app-card/app-card.component';
-import { AppTableComponent } from './components/app-table/app-table.component';
 import { AppChartComponent } from './components/app-chart/app-chart.component';
 import { AppPedidosComponent } from './components/app-pedidos/app-pedidos.component';
 import { PedidoListComponent } from './components/app-pedidos/pedido-list/pedido-list.component';
 import { PedidoComponent } from './components/app-pedidos/pedido/pedido.component';
 import { AppPdfComponent } from './components/app-pdf/app-pdf.component';
+import { AppProductosComponent } from './components/app-productos/app-productos.component';
+import { ProductoComponent } from './components/app-productos/producto/producto.component';
+import { ProductoListComponent } from './components/app-productos/producto-list/producto-list.component';
+import { AppointmentComponent } from './components/app-appointments/appointment/appointment.component';
+import { AppointmentListComponent } from './components/app-appointments/appointment-list/appointment-list.component';
 
 //Shared
 import { TheNavbarComponent } from './shared/the-navbar/the-navbar.component';
@@ -40,9 +45,9 @@ import { ReporteComponent } from './pages/reporte/reporte.component';
 import { StockComponent } from './pages/stock/stock.component';
 import { FacturaComponent } from './pages/factura/factura.component';
 import { BalanceComponent } from './pages/balance/balance.component';
-import { AppProductosComponent } from './components/app-productos/app-productos.component';
-import { ProductoComponent } from './components/app-productos/producto/producto.component';
-import { ProductoListComponent } from './components/app-productos/producto-list/producto-list.component';
+import { AppAppointmentsComponent } from './components/app-appointments/app-appointments.component';
+
+
 
 
 @NgModule({
@@ -58,7 +63,6 @@ import { ProductoListComponent } from './components/app-productos/producto-list/
     ReporteComponent,
     StockComponent,
     FacturaComponent,
-    AppTableComponent,
     AppChartComponent,
     TheNavbarComponent,
     TheEggsComponent,
@@ -71,7 +75,10 @@ import { ProductoListComponent } from './components/app-productos/producto-list/
     BalanceComponent,
     AppProductosComponent,
     ProductoComponent,
-    ProductoListComponent
+    ProductoListComponent,
+    AppAppointmentsComponent,
+    AppointmentComponent,
+    AppointmentListComponent,
   ],
   imports: [
     BrowserModule,
@@ -81,7 +88,7 @@ import { ProductoListComponent } from './components/app-productos/producto-list/
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule
   ],
-  providers: [PedidoService, ProductoService],
+  providers: [PedidoService, ProductoService, AppointmentService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
