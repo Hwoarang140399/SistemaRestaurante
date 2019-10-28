@@ -33,12 +33,12 @@ import { AppEmpleadomesComponent } from './components/statistics/app-empleadomes
 import { AppTrendComponent } from './components/statistics/app-trend/app-trend.component';
 import { AppTimeComponent } from './components/statistics/app-time/app-time.component';
 
-
 //Shared
 import { TheNavbarComponent } from './shared/the-navbar/the-navbar.component';
 import { TheEggsComponent } from './shared/the-eggs/the-eggs.component';
 import { TheButtonComponent } from './shared/the-button/the-button.component';
 import { TheFooterComponent } from './shared/the-footer/the-footer.component';
+import { ThePopupComponent } from './shared/the-popup/the-popup.component';
 
 //Views
 import { HomeComponent } from './pages/home/home.component';
@@ -86,6 +86,7 @@ import { BalanceComponent } from './pages/balance/balance.component';
     AppEmpleadomesComponent,
     AppTrendComponent,
     AppTimeComponent,
+    ThePopupComponent,
   ],
   imports: [
     BrowserModule,

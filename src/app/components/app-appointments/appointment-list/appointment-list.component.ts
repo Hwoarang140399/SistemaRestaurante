@@ -24,11 +24,15 @@ export class AppointmentListComponent implements OnInit {
   }
 
   onEdit(appointment: Appointment) {
-    this.appointmentService.selectedAppointment = Object.assign({}, appointment)
+    if (confirm("Desea editar la reserva?")) {
+      this.appointmentService.selectedAppointment = Object.assign({}, appointment)
+    }
   }
 
   onDelete($key: string) {
-    this.appointmentService.deleteAppointment($key);
+    if (confirm("Desea eliminar la reserva?")) {
+      this.appointmentService.deleteAppointment($key);
+    }
   }
 
 }

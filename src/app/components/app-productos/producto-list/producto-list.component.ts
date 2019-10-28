@@ -25,11 +25,14 @@ export class ProductoListComponent implements OnInit {
   }
 
   onEdit(producto: Producto) {
-    this.productoService.selectedProducto = Object.assign({}, producto);
+    if (confirm("Desea editar el producto?")) {
+      this.productoService.selectedProducto = Object.assign({}, producto);
+    }
   }
 
   onDelete($key: string) {
-    this.productoService.deleteProducto($key);
+    if (confirm("Desea eliminar el producto?")) {
+      this.productoService.deleteProducto($key);
+    }
   }
-
 }

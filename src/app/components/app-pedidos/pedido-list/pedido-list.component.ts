@@ -26,11 +26,14 @@ export class PedidoListComponent implements OnInit {
   }
 
   onEdit(pedido: Pedido) {
-    this.pedidoService.selectedPedido = Object.assign({}, pedido);
-
+    if (confirm("Desea editar el pedido?")) {
+      this.pedidoService.selectedPedido = Object.assign({}, pedido);
+    }
   }
 
   onDelete($key: string) {
-    this.pedidoService.deletePedido($key);
+    if (confirm("Seguro que desea eliminar el pedido?")) {
+      this.pedidoService.deletePedido($key);
+    }
   }
 }
