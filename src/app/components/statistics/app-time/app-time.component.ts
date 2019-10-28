@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class AppTimeComponent implements OnInit {
 
   public pieChartLabels = ['Mañana', 'Tarde', 'Noche']
-  public pieChartData = [120, 150, 90]
+  public pieChartData = [105, 380, 220]
   public pieChartType = "pie"
 
   constructor() { }
