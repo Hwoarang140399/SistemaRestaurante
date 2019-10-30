@@ -51,6 +51,8 @@ import { StockComponent } from './pages/stock/stock.component';
 import { FacturaComponent } from './pages/factura/factura.component';
 import { BalanceComponent } from './pages/balance/balance.component';
 
+// libary
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 
 
@@ -94,7 +96,8 @@ import { BalanceComponent } from './pages/balance/balance.component';
     ChartsModule,
     FormsModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    Ng2SearchPipeModule
   ],
   providers: [PedidoService, ProductoService, AppointmentService],
   bootstrap: [AppComponent]

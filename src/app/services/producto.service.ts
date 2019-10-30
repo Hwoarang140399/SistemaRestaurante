@@ -38,6 +38,4 @@ export class ProductoService {
   deleteProducto($key: string) {
     this.productoList.remove($key);
   }
-
-
 }

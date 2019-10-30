@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Plato } from '../../models/plato';
-import { Bebida } from '../../models/bebida';
-import { Postre } from 'src/app/models/postre';
+// import { Plato } from '../../models/plato';
+// import { Bebida } from '../../models/bebida';
+// import { Postre } from 'src/app/models/postre';
+// import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-plato',
@@ -9,48 +10,42 @@ import { Postre } from 'src/app/models/postre';
   styleUrls: ['./app-plato.component.css']
 })
 export class AppPlatoComponent implements OnInit {
+  searchText;
+  platos = [
+    { id: "Entrada", name: "Papa Rellena", price: 10 },
+    { id: "Entrada", name: "Anticuchos", price: 13 },
+    { id: "Entrada", name: "Ceviche", price: 18 },
+    { id: "Entrada", name: "Causa Rellena", price: 15 },
+    { id: "Sopa", name: "Aguadito", price: 7 },
+    { id: "Sopa", name: "Sopa de pollo", price: 8 },
+    { id: "Sopa", name: "Sopa de Cemola", price: 10 },
+    { id: "Sopa", name: "Caldo de res", price: 13 },
+    { id: "Plato Principal", name: "Arroz Chaufa", price: 12 },
+    { id: "Plato Principal", name: "Cau Cau", price: 14 },
+    { id: "Plato Principal", name: "Pollo a la Brasa", price: 15 },
+    { id: "Plato Principal", name: "Arroz Con Pollo", price: 18 },
+    { id: "Plato Principal", name: "Seco a la Norteña", price: 19 },
+    { id: "Plato Principal", name: "Arroz con Pato", price: 19 }
+  ]
+  bebidas = [
+    { id: "Bebida Fria", name: "Gaseosa de 1 litro", price: 7 },
+    { id: "Bebida Fria", name: "Chicha de Jora", price: 10 },
+    { id: "Bebida Fria", name: "Chicha Morada", price: 12 },
+    { id: "Bebida Fria", name: "Limonada Frozen", price: 14 }
+  ]
+  postres = [
+    { id: "Postre", name: "Torta de Chocolate", price: 6 },
+    { id: "Postre", name: "Keke de Vainilla", price: 4 },
+    { id: "Postre", name: "Cheesecake de Maracuya", price: 8 },
+    { id: "Postre", name: "Crumble de Fresas", price: 10 }
 
-  public platos: Plato[];
-  public bebidas: Bebida[];
-  public postres: Postre[];
+  ]
 
-  constructor() {
-    this.platos = [
-      new Plato("Entrada", "Papa Rellena", 10),
-      new Plato("Entrada", "Anticuchos", 13),
-      new Plato("Entrada", "Ceviche", 18),
-      new Plato("Entrada", "Causa Rellena", 15),
-      new Plato("Sopa", "Aguadito", 7),
-      new Plato("Sopa", "Sopa de pollo", 8),
-      new Plato("Sopa", "Sopa de Cemola", 10),
-      new Plato("Sopa", "Caldo de res", 13),
-      new Plato("Plato Principal", "Arroz Chaufa", 12),
-      new Plato("Plato Principal", "Cau Cau", 14),
-      new Plato("Plato Principal", "Pollo a la Brasa", 15),
-      new Plato("Plato Principal", "Arroz Con Pollo", 18),
-      new Plato("Plato Principal", "Seco a la Norteña", 19),
-      new Plato("Plato Principal", "Arroz con Pato", 19),
-    ],
-      this.bebidas = [
-        new Bebida("Bebida Fria", "Gaseosa de 1 litro", 7),
-        new Bebida("Bebida Fria", "Chicha de Jora", 10),
-        new Bebida("Bebida Fria", "Chicha Morada", 12),
-        new Bebida("Bebida Fria", "Limonada Frozen", 14),
-      ],
-      this.postres = [
-        new Postre("Postre", "Torta de Chocolate", 6),
-        new Postre("Postre", "Keke de Vainilla", 4),
-        new Postre("Postre", "Cheesecake de Maracuya", 8),
-        new Postre("Postre", "Crumble de Fresas", 10)
-
-      ]
-  }
+  constructor() { }
 
   ngOnInit() {
   }
 
-  ordenarPedido() {
-    alert("Pedido Ordenado")
-  }
+
 
 }
